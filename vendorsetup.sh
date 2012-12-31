@@ -1,4 +1,5 @@
 add_lunch_combo slim_p500-userdebug
+add_lunch_combo slim_thunderc-userdebug
 add_lunch_combo slim_d2att-userdebug
 add_lunch_combo slim_d2vzw-userdebug
 add_lunch_combo slim_d2spr-userdebug
