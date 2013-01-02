@@ -119,8 +119,8 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
     vendor/slim/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache 
 
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/app/com.acquariusoft.UpdateMe.apk:data/app/com.acquariusoft.UpdateMe.apk
+#PRODUCT_COPY_FILES += \
+#    vendor/slim/prebuilt/common/app/com.acquariusoft.UpdateMe.apk:data/app/com.acquariusoft.UpdateMe.apk
 
 # Required packages
 PRODUCT_PACKAGES += \
@@ -132,6 +132,9 @@ PRODUCT_PACKAGES += \
 # Optional packages
 PRODUCT_PACKAGES += \
     Basic \
+	DSPManager \
+	Apollo \
+	VoiceDialer \
     HoloSpiralWallpaper \
     NoiseField \
     Galaxy4 \
@@ -176,7 +179,7 @@ else
             ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date +"%Y%m%d-%H%M")-UNOFFICIAL
+            ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date +"%Y%m%d-%H%M")-thekraven
     endif
 endif
 
@@ -189,6 +192,6 @@ else
             ro.modversion=Slim-$(PRODUCT_RELEASE_NAME)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(PRODUCT_RELEASE_NAME)-$(shell date +"%Y%m%d-%H%M")-UNOFFICIAL
+            ro.modversion=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(PRODUCT_RELEASE_NAME)-$(shell date +"%Y%m%d-%H%M")-thekraven
     endif
 endif
